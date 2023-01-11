@@ -1,4 +1,4 @@
-Using Transform Transition CSS Properties
+Using Transform Transition Translate CSS Properties
 
 Self Notes: 
 /* transition 1 X axis borabor samne jai */
