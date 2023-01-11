@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Accident - CSS Animation</title>
+
+    <style>
+        .scenario{
+            width: 1490px;
+            height: 600px;
+            background-color: black;
+            border: 5px solid red;
+            margin: 0px;
+        }
+        .road{
+            width: 1490px;
+            height: 600px;
+            position: relative;
+        }
+
+        .bus{
+            width: 600px;
+            height: 700px;
+            position: relative;
+            top: -500px;
+            left: 850px;
+            /* border: 2px solid red; */
+            transition: transform 2s ease-in 0.3s;
+        }
+        .scenario:hover .bus{
+            transform: translateX(-236px);
+        }
+        .car{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            top: -750px;
+            right: 295px;
+            /* border: 2px solid red; */
+            
+            /* transition 1 X axis borabor samne jai */
+            /* transition: transform 2s ease-in 0.3s;  */
+           
+            /* transition 2 X axis borabor pichone jai and rotate kore 20 degree */
+            transition: transform 3s ease-out 2s;
+            
+            /* transition 3 multiple transform hoi tokhon samne o jai and rotate o hoi ..shob hoi + - 200px 130 px kore 70px */
+            /* transition: transform 3s ease-out 2s; */
+
+            /* translate only 1 bar e kaj hobe multiple translate hobe na ... multiple chaile tokhon animation diye kora lagbe purata  */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: collisionCar 5s ease-in 2s 1 alternate; */
+            /* animation-play-state: running; */
+        }
+
+        .scenario:hover .car{
+            /* transition 1 */
+            /* transform: translateX(200px); */
+            
+            /* transition 2 */
+            transform: rotate(20deg) translateX(-230px); 
+
+            /* transition 3 - translateX(70px) e kaj kortese + - kore  */
+            /* transform: translateX(200px) rotate(20deg) translateX(-130px); */ 
+        }
+
+
+        /* QUESTION - transform a multiple translateX dile calculate kivabe ki hocche?*/
+
+        /* @keyframes collisionCar {
+            from{
+                transform: translateX(200px);
+                right: -550px;
+               left: 0px;
+            }
+            to{
+                transform: translate(200px, -100px);
+                transform: rotate(-180deg);
+                left: -100px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="scenario">
+        <img class="road" src="images/road.jpg" alt="">
+        <img class="bus"  src="images/bus.png" alt="">
+        <img class="car" src="images/car.png" alt="">
+    </div>
+</body>
+</html>
